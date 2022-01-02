@@ -59,7 +59,7 @@ jobs:
       run: make test-runtime
     - name: Cache protobuf
       id: cache-protobuf
-      uses: actions/cache@v2.1.6
+      uses: actions/cache@v2.1.7
       with:
         path: protobuf
         # NOTE: for refs that can float like 'main' the cache might be out of date!
