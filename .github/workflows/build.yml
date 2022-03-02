@@ -25,7 +25,7 @@ jobs:
       image: swift:${{ matrix.swift }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.4.0
+      uses: actions/checkout@v3
       with:
         path: main
     - name: Update and install dependencies
@@ -66,7 +66,7 @@ jobs:
         key: ${{ runner.os }}-${{ matrix.swift}}-protobuf-${{ steps.get-sha.outputs.sha }}
     - name: Checkout protobuf repo
       if: steps.cache-protobuf.outputs.cache-hit != 'true'
-      uses: actions/checkout@v2.4.0
+      uses: actions/checkout@v3
       with:
         repository: protocolbuffers/protobuf
         ref: ${{ steps.get-sha.outputs.sha }}
@@ -98,7 +98,7 @@ jobs:
       # Test on the latest Swift release
       image: swift:bionic
     steps:
-    - uses: actions/checkout@v2.4.0
+    - uses: actions/checkout@v3
     - name: Test
       run: |
         set -eu
@@ -127,6 +127,6 @@ jobs:
       # Test on the latest Swift release
       image: swift:bionic
     steps:
-    - uses: actions/checkout@v2.4.0
+    - uses: actions/checkout@v3
     - name: Build
       run: FuzzTesting/do_build.sh --${{ matrix.swiftpm_config }}-only --run-regressions
