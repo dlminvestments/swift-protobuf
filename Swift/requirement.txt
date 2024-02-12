@@ -16,6 +16,6 @@ fixtures>=3.0.0
 keystonemiddleware>=4.17.0 
 
 # Security checks
-bandit>=1.1.0 
+bandit>=1.7.7 
 
 docutils>=0.11 
