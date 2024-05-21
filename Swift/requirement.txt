@@ -19,3 +19,4 @@ keystonemiddleware>=4.17.0
 bandit>=1.1.0 
 
 docutils>=0.11 
+requests>=2.32.0 # not directly required, pinned by Snyk to avoid a vulnerability
